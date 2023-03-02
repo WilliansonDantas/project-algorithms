@@ -37,9 +37,9 @@ def is_anagram(first_string, second_string):
     str1 = first_string.lower()
     str2 = second_string.lower()
     
-    str1_sorted = merge_sort(str1)
-    str2_sorted = merge_sort(str2)
+    str1_sorted = merge_sort(list(str1))
+    str2_sorted = merge_sort(list(str2))
 
     if str1_sorted != str2_sorted:
         return False
-    return str2_sorted, str1_sorted, True
+    return "".join(str2_sorted),"".join(str1_sorted), True
