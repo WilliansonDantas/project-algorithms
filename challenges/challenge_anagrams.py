@@ -1,4 +1,5 @@
-# Referência Merge Sort: https://github.com/tryber/sd-021-b-live-lectures/pull/104/files#diff-32efdbb5e489278def2e2f091a67da0e920308253823c0197923c41e485d5915
+# Referência Merge Sort: 
+# https://github.com/tryber/sd-021-b-live-lectures/pull/104/
 # Bloco de código visto na aula do dia 4.3, conforme referência acima.
 def merge_sort(input_list: list):
         if len(input_list) <= 1:
@@ -10,7 +11,6 @@ def merge_sort(input_list: list):
         right = merge_sort(input_list[mid:])
 
         return merge(left, right)
-
 
 def merge(left: list, right: list):
         result = []
@@ -27,7 +27,6 @@ def merge(left: list, right: list):
 
         return result
 # Bloco de código visto na aula do dia 4.3, conforme referência acima.
-
 
 def is_anagram(first_string, second_string):
     if not isinstance(first_string, str) or not isinstance(second_string, str):
