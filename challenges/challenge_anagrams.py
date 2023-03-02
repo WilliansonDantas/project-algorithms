@@ -25,7 +25,6 @@ def merge(left: list, right: list):
         result += right
     else:
         result += left
-
     return result
 
 
@@ -33,8 +32,8 @@ def merge(left: list, right: list):
 
 
 def is_anagram(first_string, second_string):
-    if not isinstance(first_string, str) or not isinstance(second_string, str):
-        return False
+    if len(first_string) == 0 or len(second_string) == 0:
+        return first_string, second_string, False
 
     str1 = first_string.lower()
     str2 = second_string.lower()
@@ -46,5 +45,5 @@ def is_anagram(first_string, second_string):
     str2Join = "".join(str2_sorted)
 
     if str1Join != str2Join:
-        return False
+        return str1Join, str2Join, False
     return str1Join, str2Join, True
