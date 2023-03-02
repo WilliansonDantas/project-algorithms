@@ -32,7 +32,8 @@ def merge(left: list, right: list):
 
 
 def is_anagram(first_string, second_string):
-    if len(first_string) == 0 or len(second_string) == 0:
+    # if len(first_string) == 0 or len(second_string) == 0:
+    if not first_string or not second_string:
         return first_string, second_string, False
 
     str1 = first_string.lower()
