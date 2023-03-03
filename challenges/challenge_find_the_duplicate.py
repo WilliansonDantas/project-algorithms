@@ -23,11 +23,11 @@
 def find_duplicate(nums):
     if len(nums) < 2:
         return False
-    nums.sort()
-    for index in range(len(nums) - 1):
-        number = nums[index]
+    numberDuplicate = []
+    for number in nums:
         if not isinstance(number, int) or number < 0:
             return False
-        if nums[index] == nums[index + 1]:
-            return nums[index]
+        if number in numberDuplicate:
+            return number
+        numberDuplicate.append(number)
     return False
